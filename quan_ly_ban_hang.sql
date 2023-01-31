@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2023 at 09:04 AM
+-- Generation Time: Jan 31, 2023 at 08:31 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -20,9 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `quan_ly_ban_hang`
 --
-DROP DATABASE IF EXISTS `quan_ly_ban_hang`;
 CREATE DATABASE IF NOT EXISTS `quan_ly_ban_hang` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `quan_ly_ban_hang`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE IF NOT EXISTS `accounts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -59,18 +73,18 @@ CREATE TABLE IF NOT EXISTS `danh_muc` (
   `ten_danh_muc` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ten_danh_muc` (`ten_danh_muc`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `danh_muc`
 --
 
 INSERT INTO `danh_muc` (`id`, `ten_danh_muc`) VALUES
-(1, 'Áo nam'),
-(5, 'đâs'),
-(27, 'Quan neeee'),
-(3, 'Túi xách'),
-(4, 'Ví da');
+(31, '3123qwe22'),
+(28, 'http://localhost:300333'),
+(29, 'Le Khac Thien'),
+(27, 'Quan neee'),
+(3, 'Túi xách');
 
 -- --------------------------------------------------------
 
